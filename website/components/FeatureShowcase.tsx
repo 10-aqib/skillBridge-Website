@@ -75,7 +75,14 @@ export default function FeatureShowcase() {
           </div>
           <div className="reveal order-1 overflow-hidden rounded-[2rem] bg-[#e0f4ef] p-7 sm:p-10 lg:order-2">
             <div className="mx-auto flex max-w-sm gap-4 rounded-2xl bg-white p-4 shadow-xl shadow-[#aad8cf]">
-              <div className="h-20 w-20 rounded-xl bg-[#c8e9e3] flex-shrink-0"></div>
+              <Image
+                src="/worker-ac-technician.webp"
+                alt="Ali Raza, AC technician"
+                width={320}
+                height={320}
+                sizes="96px"
+                className="h-20 w-20 flex-shrink-0 rounded-xl bg-[#c8e9e3] object-cover sm:h-24 sm:w-24"
+              />
               <div className="flex-1">
                 <p className="font-bold text-[#10233d]">Ali Raza</p>
                 <p className="mt-1 text-sm text-[#52647c]">AC Technician</p>
