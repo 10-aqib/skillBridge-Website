@@ -1,4 +1,5 @@
-import { ExternalLink, Smartphone } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import AppScreensCarousel from "@/components/AppScreensCarousel";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
@@ -28,27 +29,8 @@ export default function AppPreview() {
           </a>
         </div>
         
-        <div className="reveal mx-auto w-full max-w-[310px]">
-          <div className="phone">
-            <div className="notch"></div>
-            <div className="p-5">
-              <div className="rounded-2xl bg-[#e8effd] p-5 text-center">
-                <Smartphone className="mx-auto text-[#155eef]" size={31} />
-                <h3 className="mt-4 font-bold text-[#10233d]">Interactive Preview</h3>
-                <p className="mt-2 text-sm leading-6 text-[#52647c]">
-                  Your full app experience goes here.
-                </p>
-              </div>
-              <div className="mt-5 flex justify-center">
-                <span className="h-2 w-16 rounded-full bg-[#d9e4f3]"></span>
-              </div>
-              <div className="mt-3 flex justify-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-[#155eef]"></span>
-                <span className="h-2 w-2 rounded-full bg-[#cbd9ec]"></span>
-                <span className="h-2 w-2 rounded-full bg-[#cbd9ec]"></span>
-              </div>
-            </div>
-          </div>
+        <div className="reveal">
+          <AppScreensCarousel />
         </div>
         
       </div>

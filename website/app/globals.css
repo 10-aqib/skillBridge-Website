@@ -36,8 +36,11 @@ body { margin: 0; width: 100%; color: var(--color-ink); font-family: var(--font-
   .reveal.visible { opacity: 1; transform: none; }
   
   .step-line { background: linear-gradient(90deg,#bcd4f8 50%,transparent 0); background-size: 12px 1px; }
+  .carousel-progress { width: 0; animation-name: carousel-progress; animation-timing-function: linear; animation-fill-mode: forwards; }
   .app-grid { background-image: linear-gradient(rgba(21,94,239,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(21,94,239,.055) 1px,transparent 1px); background-size: 25px 25px; }
 }
+
+@keyframes carousel-progress { from { width: 0; } to { width: 100%; } }
 
 @media (prefers-reduced-motion: reduce) { 
   html { scroll-behavior: auto; } 
