@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Link2, Menu } from "lucide-react";
-import { siteConfig } from "@/config/site";
+import { Menu } from "lucide-react";
+import Logo from "@/components/Logo";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,11 +35,8 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Primary navigation">
         
         {/* Brand */}
-        <Link href="#home" className="focus-ring flex items-center gap-2.5 rounded-lg" onClick={closeMenu}>
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#155eef] text-white shadow-lg shadow-blue-200">
-            <Link2 size={19} />
-          </span>
-          <span className="text-lg font-bold tracking-tight">{siteConfig.name}</span>
+        <Link href="#home" className="focus-ring flex items-center rounded-lg" onClick={closeMenu}>
+          <Logo markClassName="h-9 w-9" textClassName="text-xl" />
         </Link>
         
         {/* Desktop Nav */}

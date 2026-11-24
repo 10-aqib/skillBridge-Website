@@ -4,9 +4,9 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const SCREENS = [
-  { src: "/app-screens/app-home.webp", label: "Find", alt: "SkillBridge app home screen with service categories and top rated workers nearby" },
-  { src: "/app-screens/app-profile.webp", label: "Choose", alt: "SkillBridge worker profile for Ali Raza, AC technician, with rating, skills and reviews" },
-  { src: "/app-screens/app-booking.webp", label: "Book", alt: "SkillBridge booking screen with service, date, time slot and price summary" },
+  { src: "/app-screens/app-home-v2.webp", label: "Find", alt: "SkillBridge app home screen with service categories and top rated workers nearby" },
+  { src: "/app-screens/app-profile-v2.webp", label: "Choose", alt: "SkillBridge worker profile for Ali Raza, AC technician, with rating, skills and reviews" },
+  { src: "/app-screens/app-booking-v2.webp", label: "Book", alt: "SkillBridge booking screen with service, date, time slot and price summary" },
 ];
 
 const INTERVAL = 3200;
@@ -46,7 +46,7 @@ export default function AppScreensCarousel() {
   return (
     <div
       ref={rootRef}
-      className="mx-auto w-full max-w-[300px] sm:max-w-[310px]"
+      className="mx-auto w-full max-w-[272px] sm:max-w-[300px] lg:max-w-[340px]"
       role="region"
       aria-roledescription="carousel"
       aria-label="SkillBridge app preview"
@@ -76,7 +76,7 @@ export default function AppScreensCarousel() {
                   alt={screen.alt}
                   fill
                   loading="eager"
-                  sizes="(min-width: 640px) 294px, 284px"
+                  sizes="(min-width: 1024px) 324px, (min-width: 640px) 284px, 256px"
                   className={`object-cover transition-transform duration-700 ${i === active ? "scale-100" : "scale-[.96]"}`}
                 />
               </div>
